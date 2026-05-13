@@ -32,7 +32,7 @@ export class PersonsController {
     }
 
     @Put(':id')
-    updatePerson(@Body('id') id: number, @Body('name') name: string, @Body('age') age: number, @Body('job') job: string) {
+    updatePerson(@Param('id') id: number, @Body('name') name: string, @Body('age') age: number, @Body('job') job: string) {
         if (!id) {
             return { message: 'ID de la persona es requerido' };
         }
